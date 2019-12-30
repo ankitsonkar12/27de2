@@ -26,6 +26,13 @@ pipeline{
                 sh "mvn test"
             }
         }
+        stage('Test Report') {
+          steps {
+              script {
+                junit '**/surefire-reports/*.xml'
+              }
+          }
+        }
         stage('package'){
             steps{
                 sh "mvn package"
