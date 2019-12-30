@@ -31,5 +31,12 @@ pipeline{
                 sh "mvn package"
             }
         }
+        stage('sonarqube'){
+            steps{
+                withSonarQubeEnv(credentialsId:"sonar27",installationName:"sonar7.6"){
+                    sh "mvn sonar:sonar"
+                }
+            }
+        }
     }
 }
