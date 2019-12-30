@@ -41,7 +41,7 @@ pipeline{
         stage('artifacts')
         {
             steps{
-                nexusArtifactUploader artifact:[[artifactId:'MyWebApp',classifier:'',file:'/var/lib/jenkins/workspace/27dec5/target/ci-pipeline-pragra-0.0.1.jar',type:'jar']],credentialsId:'nexus4',nexusVersion:'nexus3',protocol:'http',nexusUrl:'18.220.86.161:8081',groupId:'org.springframework.boot',version:'1.0-SNAPSHOT',repository:'nexus1'
+                nexusArtifactUploader artifacts :[[artifactId:'MyWebApp',classifier:'',file:'/var/lib/jenkins/workspace/27dec5/target/ci-pipeline-pragra-0.0.1.jar',type:'jar']],credentialsId:'nexus4',nexusVersion:'nexus3',protocol:'http',nexusUrl:'18.220.86.161:8081',groupId:'org.springframework.boot',version:'1.0-SNAPSHOT',repository:'nexus1'
             }
         }
     }
