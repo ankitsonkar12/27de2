@@ -2,7 +2,7 @@ pipeline{
     agent any
     tools{
         maven "m3"
-        java "jdk8"
+        jdk "jdk8"
 
     }
     stages{
