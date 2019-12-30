@@ -5,9 +5,7 @@ pipeline{
         jdk "jdk8"
     
     }
-    triggers{
-        pollSCM("* * * * *")
-    }
+   
     stages{
         stage('checkout')
         {
